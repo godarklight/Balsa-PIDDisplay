@@ -1,0 +1,13 @@
+ModCFG
+{
+    title = ExampleMod
+    author = godarklight
+    modVersion = 0.1.0
+    Plugin
+    {
+        name = ExampleMod
+        description = An example balsa mod!
+        asmpath = Addons\ExampleMod\ExampleMod.dll
+        order = 100
+    }
+} 
