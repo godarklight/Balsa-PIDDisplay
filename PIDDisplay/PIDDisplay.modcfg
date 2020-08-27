@@ -1,0 +1,13 @@
+ModCFG
+{
+    title = PIDDisplay
+    author = godarklight
+    modVersion = 0.1.0
+    Plugin
+    {
+        name = PIDDisplay
+        description = PIDDisplay mod
+        asmpath = Addons\PIDDisplay\PIDDisplay.dll
+        order = 100
+    }
+} 

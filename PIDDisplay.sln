@@ -1,7 +1,7 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleMod", "ExampleMod\ExampleMod.csproj", "{1F4A9B1E-19F7-4ADA-82C7-FC45DE8EB301}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PIDDisplay", "PIDDisplay\PIDDisplay.csproj", "{1F4A9B1E-19F7-4ADA-82C7-FC45DE8EB301}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

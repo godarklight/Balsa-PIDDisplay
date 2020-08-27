@@ -5,8 +5,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{1F4A9B1E-19F7-4ADA-82C7-FC45DE8EB301}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>ExampleMod</RootNamespace>
-    <AssemblyName>ExampleMod</AssemblyName>
+    <RootNamespace>PIDDisplay</RootNamespace>
+    <AssemblyName>PIDDisplay</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -511,11 +511,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ExampleMod.cs" />
+    <Compile Include="PIDDisplay.cs" />
     <Compile Include="Loader.cs" />
+    <Compile Include="PIDWindow.cs" />
+    <Compile Include="PIDSample.cs" />
+    <Compile Include="PIDCrackerOpener.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ExampleMod.modcfg">
+    <None Include="PIDDisplay.modcfg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

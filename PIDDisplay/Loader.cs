@@ -2,7 +2,7 @@
 using BalsaCore;
 using UnityEngine;
 
-namespace ExampleNamespace
+namespace PIDDisplay
 {
     [BalsaAddon]
     public class Loader
@@ -19,8 +19,8 @@ namespace ExampleNamespace
             if (go == null)
             {
                 go = new GameObject();
-                mod = go.AddComponent<ExampleMod>();
-                ExampleMod.Log("Initialized!");
+                mod = go.AddComponent<PIDDisplayMod>();
+                PIDDisplayMod.Log("Initialized!");
             }
         }
 
