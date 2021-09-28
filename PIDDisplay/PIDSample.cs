@@ -1,11 +1,20 @@
 ﻿using System;
+
 namespace PIDDisplay
 {
     public class PIDSample
     {
-        public float p;
-        public float i;
-        public float d;
-        public float total;
+        public double p;
+        public double i;
+        public double d;
+        public double total;
+
+        public PIDSample(Autopilot.PID pid)
+        {
+            p = pid.p;
+            i = pid.i;
+            d = pid.d;
+            total = pid.outputValue;
+        }
     }
 }

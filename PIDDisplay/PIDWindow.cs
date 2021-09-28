@@ -18,7 +18,7 @@ namespace PIDDisplay
         private string pString;
         private string iString;
         private string dString;
-        private PID32 watchPID = null;
+        private Autopilot.PID watchPID = null;
 
 
         private void Init()
@@ -38,7 +38,10 @@ namespace PIDDisplay
             drawTexture.Apply();
             modeStrings[0] = "Pitch";
             modeStrings[1] = "Roll";
-            modeStrings[2] = "Yaw";
+            modeStrings[2] = "Speed";
+            modeStrings[3] = "Vertical Speed";
+            modeStrings[4] = "Altitude";
+            modeStrings[5] = "Heading";
         }
 
         public void Draw()
@@ -139,7 +142,7 @@ namespace PIDDisplay
             return displayMode;
         }
 
-        public void SetPID(PID32 pid)
+        public void SetPID(Autopilot.PID pid)
         {
             if (watchPID == null)
             {

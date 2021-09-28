@@ -7,7 +7,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>PIDDisplay</RootNamespace>
     <AssemblyName>PIDDisplay</AssemblyName>
-    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -32,7 +32,6 @@
     <Compile Include="Loader.cs" />
     <Compile Include="PIDWindow.cs" />
     <Compile Include="PIDSample.cs" />
-    <Compile Include="PIDCrackerOpener.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="PIDDisplay.modcfg">
@@ -74,6 +73,14 @@
     </Reference>
     <Reference Include="System">
       <HintPath>..\External\Managed\System.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Autopilot">
+      <HintPath>..\External\Mavlink\Autopilot.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="AutopilotCommon">
+      <HintPath>..\External\Mavlink\AutopilotCommon.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>

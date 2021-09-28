@@ -1,6 +1,8 @@
 using System;
 using BalsaCore;
 using UnityEngine;
+using Autopilot;
+using AutopilotCommon;
 namespace PIDDisplay
 {
 
@@ -20,22 +22,35 @@ namespace PIDDisplay
             if (GameLogic.CurrentScene == GameScenes.FLIGHT && GameLogic.LocalPlayerVehicle != null)
             {
                 Vehicle v = GameLogic.LocalPlayerVehicle;
-                if (v.Autotrim != null && v.Autotrim.pitch != null && v.Autotrim.roll != null && v.Autotrim.yaw != null && v.Autotrim.autoTrimEnabled)
+                AutopilotComponent ac = v.GetComponent<AutopilotComponent>();
+                if (ac != null)
                 {
                     PIDSample pidSample = null;
                     switch (pidWindow.GetMode())
                     {
                         case 0:
-                            pidSample = PIDCrackerOpener.GetSample(v.Autotrim.pitch);
-                            pidWindow.SetPID(v.Autotrim.pitch);
+                            pidSample = new PIDSample(ac.pitchPid);
+                            pidWindow.SetPID(ac.pitchPid);
                             break;
                         case 1:
-                            pidSample = PIDCrackerOpener.GetSample(v.Autotrim.roll);
-                            pidWindow.SetPID(v.Autotrim.roll);
+                            pidSample = new PIDSample(ac.rollPid);
+                            pidWindow.SetPID(ac.rollPid);
                             break;
                         case 2:
-                            pidSample = PIDCrackerOpener.GetSample(v.Autotrim.yaw);
-                            pidWindow.SetPID(v.Autotrim.yaw);
+                            pidSample = new PIDSample(ac.speedPid);
+                            pidWindow.SetPID(ac.speedPid);
+                            break;
+                        case 3:
+                            pidSample = new PIDSample(ac.verticalSpeedPid);
+                            pidWindow.SetPID(ac.verticalSpeedPid);
+                            break;
+                        case 4:
+                            pidSample = new PIDSample(ac.altitudePid);
+                            pidWindow.SetPID(ac.altitudePid);
+                            break;
+                        case 5:
+                            pidSample = new PIDSample(ac.headingPid);
+                            pidWindow.SetPID(ac.headingPid);
                             break;
                     }
                     pidWindow.ReportSample(pidSample);

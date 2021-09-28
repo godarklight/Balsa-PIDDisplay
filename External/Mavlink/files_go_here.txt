@@ -1,0 +1,1 @@
+Copy or symlink Balsa-MAVLink-Autopilot/Autopilot/bin/Debug/*.dll into this folder.

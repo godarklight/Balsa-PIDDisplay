@@ -2,6 +2,7 @@
 UserPrefs.xml
 External/Managed/*.dll
 External/Managed/*.mdb
+External/Mavlink/*.dll
 [Bb]in/
 [Oo]bj/
 .vscode/launch.json
